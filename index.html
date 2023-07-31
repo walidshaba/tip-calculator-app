@@ -15,7 +15,65 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <section>
+      <div class="logo"><img src="assets/images/logo.svg" alt="" /></div>
+      <form action="" class="container">
+        <div class="left-row">
+          <div class="bill">
+            <legend>Bill</legend>
+            <input type="number" name="" id="" value="0" />
+          </div>
+          <div class="select-tip">
+            <legend>Select Tip %</legend>
+            <div class="grp-tips">
+              <div class="pre-defined-tips">
+                <input type="radio" name="tip-radio" id="5" value="5" />
+                <label for="5">5%</label>
+              </div>
+              <div class="pre-defined-tips">
+                <input type="radio" name="tip-radio" id="10" value="10" />
+                <label for="10">10%</label>
+              </div>
+              <div class="pre-defined-tips">
+                <input type="radio" name="tip-radio" id="15" value="15" />
+                <label for="15">15%</label>
+              </div>
+              <div class="pre-defined-tips">
+                <input type="radio" name="tip-radio" id="25" value="25" />
+                <label for="25">25%</label>
+              </div>
+              <div class="pre-defined-tips">
+                <input type="radio" name="tip-radio" id="50" value="50" />
+                <label for="50">50%</label>
+              </div>
+              <div class="custom pre-defined-tips">
+                <input
+                  type="number"
+                  name="tip-radio"
+                  id=""
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="nop">
+            <legend>Number of People</legend>
+            <input type="number" name="" id="nop" value="0" />
+          </div>
+        </div>
+
+        <div class="right-row">
+          <div class="tip-amount">
+            <p>Tip Amount <span>/ person</span></p>
+            <h1>$0.00</h1>
+          </div>
+          <div class="total-amount">
+            <p>Total <span> / person</span></p>
+            <h1>$0.00</h1>
+          </div>
+          <input type="reset" value="reset" />
+        </div>
+      </form>
+    </section>
   </body>
 </html>

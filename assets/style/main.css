@@ -6,10 +6,6 @@
   font-family: var(--spaceMono);
 }
 
-body {
-  /* display: inline-block; */
-}
-
 :root {
   /* Fonts */
   --spaceMono: 'Space Mono', monospace;
@@ -24,4 +20,218 @@ body {
   --lightGrayishCyan: hsl(185, 41%, 84%);
   --veryLightGrayishCyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  height: 790px;
+  background-color: var(--lightGrayishCyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .logo {
+  position: absolute;
+  top: 100px;
+}
+
+section .container {
+  height: 400px;
+  width: 800px;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.container .left-row {
+  display: flex;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.left-row .bill {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+legend {
+  color: var(--darkGrayishCyan);
+}
+
+.left-row .bill input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  /* padding: 0 5px; */
+  font-size: 24px;
+  align-items: center;
+  color: var(--grayishCyan);
+  border: none;
+  background-color: var(--veryLightGrayishCyan);
+  border-radius: 2px;
+  text-align: right;
+}
+.left-row .bill input:focus {
+  color: var(--veryDarkCyan);
+  outline: 2px solid var(--strongCyan);
+}
+
+.left-row .select-tip {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 130px;
+  justify-content: center;
+}
+
+.select-tip .grp-tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.select-tip .pre-defined-tips {
+  width: 100px;
+  height: 40px;
+  background-color: var(--veryDarkCyan);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pre-defined-tips input {
+  display: none;
+}
+
+.pre-defined-tips label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 24px;
+}
+
+.pre-defined-tips label:hover {
+  background-color: var(--strongCyan);
+}
+
+.pre-defined-tips input:checked + label {
+  background-color: hsla(172, 67%, 40%, 0.829);
+}
+
+.pre-defined-tips.custom input {
+  display: unset;
+  width: 100px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  background-color: var(--veryLightGrayishCyan);
+  color: var(--grayishCyan);
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+}
+.pre-defined-tips.custom input::placeholder {
+  text-align: center;
+}
+
+.pre-defined-tips.custom input:focus {
+  color: var(--veryDarkCyan);
+  outline: 2px solid var(--strongCyan);
+}
+
+.left-row .nop input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  /* padding: 0 5px; */
+  font-size: 24px;
+  align-items: center;
+  color: var(--grayishCyan);
+  border: none;
+  background-color: var(--veryLightGrayishCyan);
+  border-radius: 2px;
+  text-align: right;
+}
+.left-row .nop input:focus {
+  color: var(--veryDarkCyan);
+  outline: 2px solid var(--strongCyan);
+}
+
+.container .right-row {
+  width: 350px;
+  background-color: var(--veryDarkCyan);
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  color: var(--white);
+  padding: 40px 0 0;
+}
+
+.right-row .tip-amount,
+.right-row .total-amount {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.tip-amount p,
+.total-amount p {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.tip-amount p span,
+.total-amount p span {
+  font-size: 13px;
+  color: var(--grayishCyan);
+}
+
+.tip-amount h1,
+.total-amount h1 {
+  font-size: 40px;
+  color: var(--strongCyan);
+}
+
+.right-row input {
+  width: 280px;
+  height: 40px;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--veryDarkCyan);
+  background-color: var(--strongCyan);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.right-row input:hover {
+  background-color: var(--lightGrayishCyan);
+  transform: translateY(40px);
 }
