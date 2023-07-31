@@ -27,7 +27,10 @@ body {
   width: 100%;
   height: 100%;
 }
-
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
 section {
   height: 790px;
   background-color: var(--lightGrayishCyan);
@@ -67,8 +70,10 @@ section .container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  width: 95%;
 }
 legend {
+  font-size: 14px;
   color: var(--darkGrayishCyan);
 }
 
@@ -84,6 +89,9 @@ legend {
   background-color: var(--veryLightGrayishCyan);
   border-radius: 2px;
   text-align: right;
+  width: 100%;
+  height: 40px;
+  padding-right: 10px;
 }
 .left-row .bill input:focus {
   color: var(--veryDarkCyan);
@@ -93,9 +101,9 @@ legend {
 .left-row .select-tip {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  height: 130px;
-  justify-content: center;
+  width: 95%;
+  height: 140px;
+  justify-content: space-between;
 }
 
 .select-tip .grp-tips {
@@ -103,7 +111,9 @@ legend {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 110px;
+  align-items: center;
+  flex-direction: row;
 }
 .select-tip .pre-defined-tips {
   width: 100px;
@@ -148,8 +158,9 @@ legend {
   background-color: var(--veryLightGrayishCyan);
   color: var(--grayishCyan);
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   text-align: right;
+  padding-right: 10px;
 }
 .pre-defined-tips.custom input::placeholder {
   text-align: center;
@@ -160,22 +171,49 @@ legend {
   outline: 2px solid var(--strongCyan);
 }
 
+.left-row .nop {
+  width: 95%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.left-row .nop legend {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-row .nop legend p#error-message {
+  display: none;
+  color: rgba(243, 71, 71, 0.856);
+}
+.left-row .nop legend p#error-message.active {
+  display: unset;
+}
+
 .left-row .nop input {
-  background-image: url(../images/icon-dollar.svg);
+  background-image: url(../images/icon-person.svg);
   background-repeat: no-repeat;
   background-position: 10px center;
-  /* padding: 0 5px; */
+
   font-size: 24px;
-  align-items: center;
   color: var(--grayishCyan);
   border: none;
   background-color: var(--veryLightGrayishCyan);
   border-radius: 2px;
   text-align: right;
+  width: 100%;
+  height: 40px;
+  padding-right: 10px;
 }
 .left-row .nop input:focus {
   color: var(--veryDarkCyan);
   outline: 2px solid var(--strongCyan);
+}
+
+.left-row .nop input.active:focus {
+  outline: 2px solid rgba(243, 71, 71, 0.856);
 }
 
 .container .right-row {
@@ -229,9 +267,9 @@ legend {
   background-color: var(--strongCyan);
   border-radius: 4px;
   cursor: pointer;
+  transform: translateY(80px);
 }
 
 .right-row input:hover {
   background-color: var(--lightGrayishCyan);
-  transform: translateY(40px);
 }
