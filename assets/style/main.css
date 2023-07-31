@@ -162,13 +162,12 @@ legend {
   text-align: right;
   padding-right: 10px;
 }
-.pre-defined-tips.custom input::placeholder {
-  text-align: center;
-}
-
 .pre-defined-tips.custom input:focus {
   color: var(--veryDarkCyan);
   outline: 2px solid var(--strongCyan);
+}
+.pre-defined-tips.custom input::placeholder {
+  text-align: center;
 }
 
 .left-row .nop {
